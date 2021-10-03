@@ -1,20 +1,14 @@
 import React from "react";
-import {
-  Container,
-  Form,
-  FormControl,
-  Nav,
-  Navbar,
-  NavDropdown,
-} from "react-bootstrap";
-import {} from "react-router-dom";
+import { Accordion, Badge, Button, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-function Header() {
-
+function MyNotes() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
       <Container>
-        <Navbar.Brand href="/">MyNotes</Navbar.Brand>
+        <Navbar.Brand>
+            <Link to='/'>MyNotes</Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="m-auto">
@@ -27,7 +21,9 @@ function Header() {
                 </Form>
             </Nav>
             <Nav>
-                <Nav.Link href="/mynotes">Dropdown</Nav.Link>
+                <Nav.Link>
+                    <Link to="/mynotes">Dropdown</Link>                
+                </Nav.Link>
                 <NavDropdown id="collasible-nav-dropdown">
                   <NavDropdown.Item href="/profile">
                     My Profile
@@ -41,4 +37,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default MyNotes;
